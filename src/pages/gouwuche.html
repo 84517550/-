@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<style type="text/css">
+    img {
+        height: 60px;
+        width: 60px;
+    }
+    
+    #aa {
+        height: 50px;
+    }
+    
+    .table-responsive .table>tbody>tr>td {
+        line-height: 78.98px;
+    }
+    
+    .a1 {
+        height: 100px;
+        background: seagreen;
+    }
+    
+    .a2 {
+        margin: 0 auto;
+        width: 100%;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="../bootstrap/dist/css/bootstrap.min.css" />
+
+<body>
+    <div class="container ">
+        <div class="row">
+            <div class="col-sm-12 ">
+                <div class=" table-responsive">
+                    <table class="table table-hover ">
+                        <tr class="success he" id="aa">
+                            <th>商品名称</th>
+                            <th>商品图片</th>
+                            <th>单价</th>
+                            <th>减少一个</th>
+                            <th>数量</th>
+                            <th>增加一个</th>
+                            <th>删除</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../lib/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="../bootstrap/dist/js/bootstrap.min.js">
+    </script>
+    <script>
+        $.ajax({
+            url: "http://localhost/src/iconfont/ajax/showlist.php",
+            dataType: "json",
+            success: function(res) {
+                if (res.code) {
+                    $("#aa").after(``)
+                    $.each(res.data, function(i, v) {
+                        $("tbody").append(`<tr id="${v.product_id}">
+                            <td>${v.product_name}</td>
+                            <td><img src=${v.product_img} class="img-thumbnail"></td>
+                            <td>${v.product_price}</td>
+                            <td><button type="button" class="btn btn-warning btn-sm jian" >-</button></td>
+                            <td>${v.product_num}</td>
+                            <td><button type="button" class="btn btn-warning btn-sm jia" >+</button></td>
+                            <td><button type="button" class="btn btn-warning btn-sm del">删除</button></td>
+                        </tr>`)
+
+                    })
+                    $(".jian").click(function() {
+                        var a = $(this)
+                        $.ajax({
+                            url: "http://localhost/src/iconfont/ajax/updatewq.php",
+                            dataType: "json",
+                            data: {
+                                id: $(this).parents("tr").attr("id"),
+                                type: 10
+                            },
+                            success: function(res) {
+                                if (res.code) {
+                                    a.parent().next().text(`${ a.parent().next().text() - 1}`)
+                                }
+                            }
+                        })
+
+                    })
+
+                    $(".jia").click(function() {
+                        var a = $(this)
+                        $.ajax({
+                            url: "http://localhost/src/iconfont/ajax/updatewq.php",
+                            dataType: "json",
+                            data: {
+                                id: $(this).parents("tr").attr("id"),
+                                type: "add"
+                            },
+                            success: function(res) {
+                                if (res.code) {
+                                    a.parent().prev().text(`${ parseInt(a.parent().prev().text()) + 1}`)
+                                }
+                            }
+                        })
+
+
+                    })
+                    $(".del").click(function() {
+                        var a = $(this)
+                        $.ajax({
+                            url: "http://localhost/src/iconfont/ajax/delwq.php",
+                            dataType: "json",
+                            data: {
+                                id: $(this).parents("tr").attr("id"),
+                            },
+                            success: function(res) {
+                                if (res.code) {
+                                    a.parents("tr").remove()
+                                }
+                            }
+                        })
+
+
+                    })
+
+
+                } else {
+                    $("#aa").after(`<tr ">
+                            <th>无内容</th>
+                        </tr>`)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

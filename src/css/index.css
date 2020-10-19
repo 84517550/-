@@ -1,0 +1,791 @@
+.main {
+    width: 1456px;
+    margin: 0 auto;
+}
+
+.wunai {
+    height: 140px;
+    background: #fe5038;
+}
+
+.fix {
+    position: fixed;
+    right: 0;
+    top: 270px;
+    z-index: 20;
+    opacity: 0.8;
+}
+
+.fix li a:hover {
+    background: gainsboro;
+    color: #fe5038;
+}
+
+.fix span {
+    font-size: 25px;
+    padding: 20px 20px 10px 20px;
+}
+
+.fix li a {
+    display: block;
+    width: 70px;
+    height: 80px;
+    background: #fff;
+    color: #757575;
+    font: 5px/10px "微软雅黑";
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header {
+    height: 48px;
+    background: #333333;
+}
+
+header .main>ul {
+    margin: 0;
+    position: relative;
+    height: 48px;
+    float: left;
+}
+
+header .main>ul>li {
+    float: left;
+}
+
+header main {
+    position: relative;
+    z-index: 2;
+}
+
+header ul span {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: ivory;
+    display: none;
+    top: 1px;
+    z-index: 10;
+}
+
+.caidan {
+    display: none;
+    box-sizing: border-box;
+    position: absolute;
+    width: 50px;
+}
+
+.caidan li a {
+    box-sizing: border-box;
+    padding: 5px;
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    line-height: 30px;
+    width: 50px;
+    border-bottom: 1px solid silver;
+    color: #929292;
+    text-decoration: none;
+    position: relative;
+    left: -5px;
+    z-index: 20;
+    background: #333333;
+    box-shadow: 1px 1px 3px silver;
+    border-radius: 5%;
+}
+
+header .main>ul>li>a,
+header .hh a {
+    display: inline-block;
+    padding-right: 20px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 48px;
+    color: #929292;
+    text-decoration: none;
+}
+
+header ul>li>a:hover,
+header .hh a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+header .hh {
+    float: right;
+    position: relative;
+}
+
+header .hq {
+    width: 325px;
+    height: 0;
+    background: seashell;
+    transition: all 0.2s linear;
+    z-index: 1;
+    box-shadow: 1px 1px 10px silver;
+    color: orangered;
+    position: absolute;
+    left: -184px;
+    top: 48px;
+    overflow: auto;
+}
+
+header .gou:hover .hq {
+    height: 120px;
+}
+
+header .gou {
+    width: 140px;
+    background: #424242;
+    position: relative;
+}
+
+header .gou span {
+    margin-right: 5px;
+}
+
+article {
+    width: 1456px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.div {
+    height: 0;
+    overflow: hidden;
+    background: #fff;
+    z-index: 15;
+    position: absolute;
+    left: 0;
+    top: 120px;
+}
+
+.diz {
+    height: 0;
+    background: #fff;
+    z-index: 14;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+.diz:hover {
+    border: 1px solid chartreuse;
+}
+
+.div a {
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+}
+
+.div img {
+    display: inline-block;
+    margin: 20px 20px 0 100px;
+}
+
+article li:hover a {
+    text-decoration: none;
+}
+
+
+/* article li:hover .div {
+	height: 230px;
+	border: 1px solid bisque ;
+	border-top: none;
+} */
+
+article .img {
+    margin-top: 30px;
+    margin-right: 300px;
+    float: left;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+article .img img {
+    position: relative;
+    left: -56px;
+    transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+article .img:hover img {
+    left: 0;
+}
+
+article p {
+    color: salmon;
+    position: relative;
+    top: 20px;
+    left: -10px;
+    font: 10px/20px "微软雅黑";
+    text-align: center;
+}
+
+article .li {
+    float: left;
+}
+
+article ul .li a {
+    display: inline-block;
+    padding-right: 20px;
+    text-align: center;
+    font: 16px/120px "微软雅黑";
+    color: #929292;
+    text-decoration: none;
+}
+
+article form {
+    margin-top: 30px;
+    position: absolute;
+    right: 0;
+}
+
+#suo {
+    width: 290px;
+    height: 370px;
+    position: absolute;
+    right: 56px;
+    border: 1px solid #F0C14B;
+    overflow: hidden;
+    background: white;
+    top: 56px;
+    z-index: 5;
+    display: none;
+    box-sizing: border-box;
+    border-top: none;
+}
+
+#suo li a {
+    font: 15px/15px "微软雅黑";
+    color: #1B1B1B;
+    padding: 20px 0 15px 20px;
+    display: block;
+}
+
+.ca {
+    border: #F0C14B 1px solid;
+}
+
+article .fei input:hover {
+    border: #F0C14B 1px solid;
+}
+
+article form input[type="search"] {
+    box-sizing: border-box;
+    padding-left: 20px;
+    width: 290px;
+    height: 56px;
+    border: 1px solid gainsboro;
+    outline: none;
+    float: left;
+}
+
+article form input[type="submit"] {
+    background: url(../images/images/images/2_03.jpg) no-repeat center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid gainsboro;
+    border-left: none;
+    float: left;
+}
+
+aside {
+    width: 1456px;
+    height: 555px;
+    margin: 0 auto;
+    position: relative;
+}
+
+aside>ul {
+    padding: 20px 0;
+    width: 280px;
+    position: absolute;
+    z-index: 6;
+    background-color: rgba(69, 80, 87, 0.4);
+}
+
+aside>ul li a {
+    display: block;
+    font: 17px/46px "微软雅黑";
+    color: #fcfdfe;
+}
+
+aside i {
+    margin-left: 20px;
+}
+
+aside>ul li a span {
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+aside>ul div {
+    width: 1180px;
+    background: whitesmoke;
+    position: absolute;
+    left: 280px;
+    top: 0;
+    height: 546px;
+    display: none;
+}
+
+aside .haha li a {
+    float: left;
+    font: 15px/40px "微软雅黑";
+    color: gray;
+    padding: 30px 0 30px 30px;
+}
+
+aside .haha li img {
+    margin-right: 3px;
+    width: 50px;
+    height: 50px;
+}
+
+aside>ul>li>a:hover {
+    background: #ff6700;
+    color: white;
+}
+
+aside>ul>li:hover a {
+    text-decoration: none;
+}
+
+aside>ul li:nth-child(1):hover .haha {
+    display: block;
+    box-shadow: 2px 2px 10px gainsboro;
+}
+
+aside>ul li:nth-child(2):hover .haha {
+    display: block;
+    box-shadow: 2px 2px 10px gainsboro;
+}
+
+aside>ul li:nth-child(3):hover .haha {
+    display: block;
+    box-shadow: 2px 2px 10px gainsboro;
+}
+
+aside>ul li:nth-child(4):hover .haha {
+    display: block;
+    box-shadow: 2px 2px 10px gainsboro;
+}
+
+aside>ul li:nth-child(5):hover .haha {
+    display: block;
+    box-shadow: 2px 2px 10px gainsboro;
+}
+
+aside>ul li:nth-child(6):hover .haha {
+    display: block;
+    box-shadow: 2px 2px 10px gainsboro;
+}
+
+aside>ul li:nth-child(7):hover .haha,
+aside>ul li:nth-child(8):hover .haha,
+aside>ul li:nth-child(9):hover .haha,
+aside>ul li:nth-child(10):hover .haha,
+aside>ul li:nth-child(11):hover .haha {
+    display: block;
+    box-shadow: 2px 2px 10px gainsboro;
+}
+
+aside .swiper-container {
+    position: absolute;
+    z-index: 4;
+    left: 0;
+    top: 0;
+}
+
+aside .carousel-control {
+    left: 280px;
+    opacity: 0.4;
+}
+
+#box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: white;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    z-index: 20;
+    display: none;
+}
+
+#box1 {
+    display: none;
+    position: absolute;
+    left: 600px;
+    top: 100px;
+    width: 600px;
+    height: 600px;
+    background: #fff;
+    cursor: pointer;
+    border: #CCCCCC 1px solid;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px gainsboro;
+    z-index: 21;
+}
+
+#box1 p {
+    font: bold 20px/40px "微软雅黑";
+    border-radius: 3%;
+    background: #edf7ff;
+    text-align: center;
+    color: white;
+}
+
+.yinc1 {
+    display: block;
+    position: absolute;
+}
+
+.yinc2 {
+    display: none;
+    position: absolute;
+}
+
+.toua {
+    background: #eff2f5;
+    color: #3169d4;
+    border-top: 10px solid #f0830e;
+}
+
+.lo {
+    display: inline-block;
+    width: 296px;
+    height: 100px;
+    font: bold 30px/100px "微软雅黑";
+    color: black;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#box1 a {
+    text-decoration: none;
+}
+
+
+/* #box1 span {
+	display: inline-block;
+	margin: 5px;
+	width: 20px;
+	float: right;
+	background: whitesmoke;
+	text-align: center;
+	border: #CCCCCC 1px solid;
+	border-radius: 8%;
+	font: bold 20px/30px "微软雅黑";
+
+} */
+
+#box1 input {
+    margin-top: 40px;
+    margin-left: 30px;
+    width: 500px;
+    height: 60px;
+    border: #cdd8ef 1px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 20px;
+    background: url(../images/cd_03.gif) no-repeat left;
+    padding-left: 40px;
+}
+
+#box1 #m1,
+#box1 #m2 {
+    background: url(../images/cd_06.jpg) no-repeat left;
+}
+
+.m1 button {
+    width: 250px;
+    height: 70px;
+    margin-top: 50px;
+    margin-left: 30px;
+    background: #13b4ff;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+#b2,
+#b3 {
+    background: #eeb438;
+}
+
+.Y {
+    color: green;
+}
+
+#box1 ul li {
+    font: 10px/20px "微软雅黑";
+    text-align: center;
+    position: relative;
+    color: darkgray;
+    height: 20px;
+}
+
+.shangou {
+    background: #e7e4e4;
+}
+
+.shangou #carousel-example-generic {
+    width: 1100px;
+    float: right;
+}
+
+.shangou .shantu {
+    float: left;
+    margin-bottom: 30px;
+}
+
+.shangou .shantu .daoji {
+    width: 292px;
+    background: #f1eded;
+}
+
+.shangou .shantu .daoji img {
+    margin-top: 25px;
+    width: 30px;
+    height: 60px;
+}
+
+.daoji span {
+    margin: 0 10px;
+}
+
+.shangou .shantu .daoji {
+    display: flex;
+    justify-content: center;
+    font: 30px/90px "微软雅黑";
+    background: black;
+    color: floralwhite;
+    border-radius: 10%;
+}
+
+.p {
+    font: 30px/100px "微软雅黑";
+}
+
+.img2 img {
+    width: 1456px;
+}
+
+.datu img {
+    float: left;
+    width: 234px;
+    height: 630px;
+    margin-right: 30px;
+    position: relative;
+}
+
+.xiu img {
+    margin: 0 20px 20px 20px;
+    width: 254px;
+    height: 300px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.shouji img:hover,
+.xiua img:hover,
+.datu img:hover {
+    box-shadow: 0 0 20px darkgray;
+    top: -1px;
+}
+
+.wei img {
+    width: 1456px;
+}
+
+.wei {
+    background: whitesmoke;
+}
+
+.xiua a img {
+    margin: 0 38px 40px 0;
+    width: 254px;
+    height: 300px;
+    position: relative;
+    transition: all 0.2s linear;
+}
+
+.xiua a .NO {
+    margin-right: 0;
+}
+
+footer {
+    margin-bottom: 40px;
+}
+
+footer .ffa {
+    border-bottom: 1px solid lightgray;
+    height: 90px;
+    width: 1456px;
+}
+
+footer .ffa li {
+    float: left;
+    font-size: 21px;
+    line-height: 90px;
+}
+
+footer .ffa li a {
+    color: #403f44;
+    text-decoration: none;
+    margin: 0 30px;
+}
+
+footer .ffa li span {
+    margin: 20px 10px 0 0;
+}
+
+footer .ffa li:nth-child(2n) {
+    margin: 0 30px;
+    color: silver;
+}
+
+footer .le li .dada {
+    color: #403f44;
+    font-size: 19px;
+    line-height: 60px;
+    text-decoration: none;
+}
+
+footer .le li a {
+    color: #403f44;
+    font-size: 15px;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+footer .le ul {
+    float: left;
+    margin-right: 90px;
+}
+
+footer .re {
+    height: 130px;
+    border-left: 1px solid darkgray;
+    float: right;
+    margin: 60px 100px 0 0;
+    width: 300px;
+    text-align: center;
+}
+
+footer .re h1 {
+    color: #ff6700;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+footer .re h2 {
+    font-size: 15px;
+    line-height: 30px;
+}
+
+footer .re h3 {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #ff6700;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+footer h3:hover {
+    color: black;
+    background: #ff6700;
+}
+
+footer .re h4 {
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.footer {
+    background: #fafafa;
+}
+
+aside .carousel-control {
+    font-size: 40px;
+}
+
+.carousel-indicators li {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    background-color: @carousel-indicator-active-bg;
+}
+
+.swiper-container {
+    width: 1456px;
+    height: 541px;
+}
+
+.swiper-container img {
+    width: 1456px;
+    height: 541px;
+}
+
+.swiper-container .swiper-button-prev {
+    left: 350px;
+}
+
+.swiper-container .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+}
+
+.swiper-container .swiper-button-next {
+    right: 100px;
+}
+
+.swiper-container .swiper-button-prev:hover,
+.swiper-container .swiper-button-next:hover {
+    background-color: #6F6F6F;
+}
+
+.swiper-container .iconfont:hover {
+    color: white;
+}
+
+.swiper-container .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 60px;
+    line-height: 100px;
+    color: silver;
+    text-align: center;
+    opacity: 1;
+}
+
+.ffa li a:hover {
+    color: #ff6700;
+}
+
+aside .swiper-button-prev,
+aside .swiper-button-next {
+    background: none;
+    width: 60px;
+    height: 100px;
+    border-radius: 5%;
+}
