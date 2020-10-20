@@ -303,10 +303,10 @@
     })
     var num = 0
     $(".gouwu").click(function() {
-        $(".gou i").html("(" + num + ")").css("color", "red")
         num++
+        $(".gou i").html("(" + num + ")").css("color", "red")
         $.ajax({
-            url: "http://localhost/src/iconfont/ajax/addwq.php",
+            url: "http://127.0.0.1/src/iconfont/ajax/addwq.php",
             dataType: "json",
             data: {
                 id: "3",
@@ -316,13 +316,11 @@
                 img: "../images/images/ds.webp"
             },
             success: function(res) {
-                if (res.code) {
-                    alert("买好了")
-                }
+                if (res.code) {}
             }
 
         })
-
+        return false
     })
     $(".chakan").click(function() {
         location.href = "./gouwuche.html"

@@ -57,7 +57,7 @@
     </script>
     <script>
         $.ajax({
-            url: "http://localhost/src/iconfont/ajax/showlist.php",
+            url: "http://127.0.0.1/src/iconfont/ajax/showlist.php",
             dataType: "json",
             success: function(res) {
                 if (res.code) {
@@ -77,7 +77,7 @@
                     $(".jian").click(function() {
                         var a = $(this)
                         $.ajax({
-                            url: "http://localhost/src/iconfont/ajax/updatewq.php",
+                            url: "http://127.0.0.1/src/iconfont/ajax/updatewq.php",
                             dataType: "json",
                             data: {
                                 id: $(this).parents("tr").attr("id"),
@@ -95,7 +95,7 @@
                     $(".jia").click(function() {
                         var a = $(this)
                         $.ajax({
-                            url: "http://localhost/src/iconfont/ajax/updatewq.php",
+                            url: "http://127.0.0.1/src/iconfont/ajax/updatewq.php",
                             dataType: "json",
                             data: {
                                 id: $(this).parents("tr").attr("id"),
@@ -113,7 +113,7 @@
                     $(".del").click(function() {
                         var a = $(this)
                         $.ajax({
-                            url: "http://localhost/src/iconfont/ajax/delwq.php",
+                            url: "http://127.0.0.1/src/iconfont/ajax/delwq.php",
                             dataType: "json",
                             data: {
                                 id: $(this).parents("tr").attr("id"),

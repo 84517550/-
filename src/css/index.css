@@ -153,33 +153,21 @@ article {
     position: relative;
 }
 
-.div {
-    height: 0;
-    overflow: hidden;
+article .li .div {
+    height: 220px;
+    width: 1456px;
     background: #fff;
-    z-index: 15;
+    z-index: 1100;
     position: absolute;
     left: 0;
     top: 120px;
-}
-
-.diz {
-    height: 0;
-    background: #fff;
-    z-index: 14;
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-}
-
-.diz:hover {
-    border: 1px solid chartreuse;
+    border-bottom: 1px solid darkgrey;
+    display: none;
 }
 
 .div a {
     box-sizing: border-box;
     display: inline-block;
-    float: left;
 }
 
 .div img {
@@ -191,16 +179,9 @@ article li:hover a {
     text-decoration: none;
 }
 
-
-/* article li:hover .div {
-	height: 230px;
-	border: 1px solid bisque ;
-	border-top: none;
-} */
-
 article .img {
     margin-top: 30px;
-    margin-right: 300px;
+    margin-right: 200px;
     float: left;
     width: 56px;
     height: 56px;
@@ -233,7 +214,8 @@ article .li {
 
 article ul .li a {
     display: inline-block;
-    padding-right: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
     text-align: center;
     font: 16px/120px "微软雅黑";
     color: #929292;
@@ -332,7 +314,7 @@ aside>ul div {
     position: absolute;
     left: 280px;
     top: 0;
-    height: 546px;
+    height: 542px;
     display: none;
 }
 
@@ -341,6 +323,10 @@ aside .haha li a {
     font: 15px/40px "微软雅黑";
     color: gray;
     padding: 30px 0 30px 30px;
+}
+
+aside .haha li a:hover {
+    color: orange;
 }
 
 aside .haha li img {

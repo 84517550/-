@@ -284,38 +284,21 @@ $(window).scroll(function() {
     })
     //article下拉菜单
 $("article .li").mouseenter(function() {
-    $(".div").eq($(this).index()).stop().animate({
-        "height": 220
-    })
-    $(".diz").eq($(this).index()).stop().animate({
-        "height": 220,
-    })
-    $(".diz").eq($(this).index()).css({
-        "border-bottom-width": 1,
-        "border-bottom-style": "solid",
-        "border-bottom-color": "#929292"
-    })
+    $(this).children(".div").stop().slideDown();
+})
+$("article .li").mouseleave(function() {
+    $(this).children(".div").hide()
 })
 
-$("article li").mouseleave(function() {
-        $(".div").eq($(this).index()).stop().css("height", 0)
-        $(".diz").eq($(this).index()).stop().css("height", 0)
-        $(".diz").eq($(this).index()).css({
-            "border-bottom-width": 0,
-            "border-bottom-style": "",
-            "border-bottom-color": ""
-        })
-    })
-    //详情页
-$("header .main>ul>li ").mouseenter(function() {
-    console.log($(this).children(".caidan"))
-    $(this).children(".caidan").stop().slideDown().parent()
-        .siblings().children(".caidan").stop().slideUp()
-})
+//详情页
+// $("header .main>ul>li ").mouseenter(function() {
+//     $(this).children(".caidan").stop().slideDown().parent()
+//         .siblings().children(".caidan").stop().slideUp()
+// })
 
-$("header .main>ul ").mouseleave(function() {
-    $(".caidan").stop().slideUp()
-})
+// $("header .main>ul ").mouseleave(function() {
+//     $(".caidan").stop().slideUp()
+// })
 $("header .caidan").click(function() {
         return false
     })
