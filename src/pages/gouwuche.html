@@ -6,7 +6,7 @@
     <title></title>
 </head>
 <style type="text/css">
-    img {
+    tbody img {
         height: 60px;
         width: 60px;
     }
@@ -17,16 +17,6 @@
     
     .table-responsive .table>tbody>tr>td {
         line-height: 78.98px;
-    }
-    
-    .a1 {
-        height: 100px;
-        background: seagreen;
-    }
-    
-    .a2 {
-        margin: 0 auto;
-        width: 100%;
     }
 </style>
 <link rel="stylesheet" type="text/css" href="../bootstrap/dist/css/bootstrap.min.css" />
@@ -85,7 +75,11 @@
                             },
                             success: function(res) {
                                 if (res.code) {
-                                    a.parent().next().text(`${ a.parent().next().text() - 1}`)
+                                    if (a.parent().next().text() == 1) {
+                                        a.parent().next().text() == 1
+                                    } else {
+                                        a.parent().next().text(`${ a.parent().next().text() - 1}`)
+                                    }
                                 }
                             }
                         })

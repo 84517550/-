@@ -2,10 +2,10 @@ var iny = document.getElementById("input")
 var ul = document.querySelector("#suo")
 var form1 = document.querySelector(".fei")
     //input搜索联想
-iny.onclick = function(e) {
-    ul.style.display = "block"
+$("#input").click(function() {
+    $("#suo").css("display", "block")
     return false
-}
+})
 $("#suo li a").click(function() {
     $("#input").val($(this).html())
     return false
@@ -330,6 +330,7 @@ $.ajax({
     // })
     //轮播图
 var mySwiper = new Swiper('.swiper-container', {
+    //切换方式
     effect: 'fade',
     fadeEffect: {
         crossFade: true,
@@ -369,4 +370,94 @@ mySwiper.el.onmouseover = function() {
 mySwiper.el.onmouseout = function() {
         mySwiper.autoplay.start();
     }
-    //去除轮播图按钮
+    //鼠标划上渲染数据购物车
+$(".gou").mouseenter(function() {
+    $(".hq").slideDown()
+    $.ajax({
+        url: "http://127.0.0.1/src/iconfont/ajax/showlist.php",
+        dataType: "json",
+        success: function(res) {
+            $("tbody").children().eq(0).nextAll().remove()
+            if (res.code) {
+                $("#aa").after(``)
+                $.each(res.data, function(i, v) {
+                    $("tbody").append(`<tr id="${v.product_id} class="clearfix:after"">
+                        <td>${v.product_name}</td>
+                        <td><img src=${v.product_img} class="img-thumbnail"></td>
+                        <td>${v.product_price}</td>
+                        <td><button type="button" class="btn btn-warning btn-sm jian" >-</button></td>
+                        <td>${v.product_num}</td>
+                        <td><button type="button" class="btn btn-warning btn-sm jia" >+</button></td>
+                        <td><button type="button" class="btn btn-warning btn-sm del">删除</button></td>
+                    </tr>`)
+                })
+                $(".jian").click(function() {
+                    var a = $(this)
+                    $.ajax({
+                        url: "http://127.0.0.1/src/iconfont/ajax/updatewq.php",
+                        dataType: "json",
+                        data: {
+                            id: $(this).parents("tr").attr("id"),
+                            type: 10
+                        },
+                        success: function(res) {
+                            if (res.code) {
+                                if (a.parent().next().text() == 1) {
+                                    a.parent().next().text() == 1
+                                } else {
+                                    a.parent().next().text(`${ a.parent().next().text() - 1}`)
+                                }
+                            }
+                        }
+                    })
+                    return false
+
+                })
+
+                $(".jia").click(function() {
+                    var a = $(this)
+                    $.ajax({
+                        url: "http://127.0.0.1/src/iconfont/ajax/updatewq.php",
+                        dataType: "json",
+                        data: {
+                            id: $(this).parents("tr").attr("id"),
+                            type: "add"
+                        },
+                        success: function(res) {
+                            if (res.code) {
+                                a.parent().prev().text(`${ parseInt(a.parent().prev().text()) + 1}`)
+                            }
+                        }
+                    })
+                    return false
+                })
+                $(".del").click(function() {
+                    var a = $(this)
+                    $.ajax({
+                        url: "http://127.0.0.1/src/iconfont/ajax/delwq.php",
+                        dataType: "json",
+                        data: {
+                            id: $(this).parents("tr").attr("id"),
+                        },
+                        success: function(res) {
+                            if (res.code) {
+                                a.parents("tr").remove()
+                            }
+                        }
+                    })
+                    return false
+                })
+
+
+            } else {
+                $("#aa").after(`<tr ">
+                        <th>无内容</th>
+                    </tr>`)
+            }
+        }
+    })
+    return false
+})
+$(".gou").mouseleave(function() {
+    $(".hq").stop().slideUp()
+})

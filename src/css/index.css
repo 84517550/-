@@ -119,25 +119,18 @@ header .hh {
 }
 
 header .hq {
-    width: 325px;
-    height: 0;
-    background: seashell;
-    transition: all 0.2s linear;
-    z-index: 1;
+    width: 400px;
+    background: #fff;
+    z-index: 100;
     box-shadow: 1px 1px 10px silver;
-    color: orangered;
     position: absolute;
-    left: -184px;
+    left: -180px;
     top: 48px;
-    overflow: auto;
-}
-
-header .gou:hover .hq {
-    height: 120px;
+    display: none;
 }
 
 header .gou {
-    width: 140px;
+    width: 220px;
     background: #424242;
     position: relative;
 }
@@ -774,4 +767,39 @@ aside .swiper-button-next {
     width: 60px;
     height: 100px;
     border-radius: 5%;
+}
+
+tbody img {
+    width: 30px;
+    height: 30px;
+}
+
+tbody tr:nth-child(1) {
+    font-size: 8px;
+    color: black;
+    text-align: center;
+    height: 40px;
+    width: 100%;
+}
+
+tbody tr th {
+    margin-right: 10px;
+}
+
+tbody tr {
+    font-size: 6px;
+    color: black;
+    line-height: 40px;
+    text-align: center;
+    height: 40px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+tbody button {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    background: black;
+    cursor: pointer;
 }
