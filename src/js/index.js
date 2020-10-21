@@ -380,10 +380,10 @@ $(".gou").mouseenter(function() {
             if (res.code) {
                 $("#aa").after(``)
                 $.each(res.data, function(i, v) {
-                    $("tbody").append(`<tr id="${v.product_id} class="clearfix:after"">
+                    $("tbody").append(`<tr id="${v.product_id}">
                         <td>${v.product_name}</td>
                         <td><img src=${v.product_img} class="img-thumbnail"></td>
-                        <td>${v.product_price}</td>
+                        <td>${v.product_price}元</td>
                         <td><button type="button" class="btn btn-warning btn-sm jian" >-</button></td>
                         <td>${v.product_num}</td>
                         <td><button type="button" class="btn btn-warning btn-sm jia" >+</button></td>
