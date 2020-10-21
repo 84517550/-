@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
 </head>
 <link rel="stylesheet" type="text/css" href="../css/public.css" />
-<link rel="stylesheet" type="text/css" href="../css/index.css" />
 <link rel="stylesheet" href="../iconfont/iconfont.css">
 <link rel="stylesheet" href="../css/public.css">
 <style type="text/css">
@@ -182,14 +181,9 @@
         width: 100%;
     }
     
-    tbody tr th {
-        margin-right: 10px;
-    }
-    
     tbody tr {
         font-size: 6px;
         color: black;
-        line-height: 40px;
         text-align: center;
         height: 40px;
         width: 100%;
@@ -212,7 +206,28 @@
         display: block;
         margin-bottom: 20px;
     }
+    
+    .hh.hq {
+        width: 300px;
+        background: seashell;
+        z-index: 100;
+        box-shadow: 1px 1px 10px silver;
+        position: absolute;
+        left: -180px;
+        top: 48px;
+        display: none;
+    }
+    
+    tbody tr th {
+        font-size: 5px !important;
+        color: black;
+        text-align: center;
+        height: 30px;
+        table-layout: fixed;
+        margin-left: 20px;
+    }
 </style>
+<link rel="stylesheet" type="text/css" href="../css/index.css" />
 
 <body>
     <header>

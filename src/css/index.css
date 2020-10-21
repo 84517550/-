@@ -775,16 +775,12 @@ tbody img {
 }
 
 tbody tr th {
-    font-size: 8px;
+    font-size: 5px !important;
     color: black;
     text-align: center;
     height: 30px;
-    width: 100px;
+    width: 50px;
     table-layout: fixed;
-}
-
-tbody tr th {
-    margin-right: 10px;
 }
 
 tbody tr {
@@ -793,7 +789,7 @@ tbody tr {
     text-align: center;
     height: 40px;
     width: 100%;
-    padding-bottom: 10px;
+    line-height: 10px;
 }
 
 tbody button {
