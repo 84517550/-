@@ -184,7 +184,6 @@ b0.onclick = function() {
         }, `name=${z1.value}&word=${z2.value}&expires=10`)
     }
     //注册登录点击换
-console.log($("#box1 a"))
 $("#box1 a").click(function() {
         console.log($(this).index())
         $(this).addClass("toua").siblings("a").removeClass("toua")
@@ -440,6 +439,7 @@ $(".gou").mouseenter(function() {
                             id: $(this).parents("tr").attr("id"),
                         },
                         success: function(res) {
+                            console.log(res)
                             if (res.code) {
                                 a.parents("tr").remove()
                             }

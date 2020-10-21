@@ -59,7 +59,7 @@ const watch = () => {
 const server = () => {
     return gulp.src("./dist")
         .pipe(webserver({
-            port: 80,
+            port: 8080,
             open: "../pages/index.html",
             livereload: true,
             proxies: [{

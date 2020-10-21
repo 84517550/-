@@ -144,7 +144,7 @@
         margin: 20px 0;
     }
     
-    .a1 ul li:nth-child(9),
+    .a1 ul li:nth-child(10),
     .chakan {
         width: 200px;
         text-align: center;
@@ -157,7 +157,7 @@
         margin-left: 10px;
     }
     
-    .a1 ul li:nth-child(9):hover,
+    .a1 ul li:nth-child(10):hover,
     .chakan:hover {
         background: #ff6700;
         color: white;
@@ -201,6 +201,15 @@
         color: #fff;
         background: black;
         cursor: pointer;
+    }
+    
+    #hehe {
+        height: 20px;
+        width: 200px;
+        border: 1px solid slategray;
+        margin: 5px 0 0 10px;
+        display: block;
+        margin-bottom: 20px;
     }
 </style>
 
@@ -270,6 +279,7 @@
                 <li>选择版本</li>
                 <li><span>8GB+125GB</span><span>16GB+256GB</span></li>
                 <li>小米10至尊纪念版 <br>16GB+512GB 亮银版6999元</li>
+                <input type="text" id="hehe" placeholder="请输入购买数量" value="1">
                 <li class="gouwu">加入购物车</li>
                 <li class="chakan">查看购物车</li>
             </ul>
@@ -347,11 +357,11 @@
                 id: "2",
                 name: "小米游戏本",
                 price: 5988,
-                num: 1,
+                num: $("#hehe").val(),
                 img: "../images/images/dn.jpg"
             },
             success: function(res) {
-                if (res.code) {}
+                alert(`成功加入${$("#hehe").val()}个`)
             }
 
         })
@@ -372,7 +382,7 @@
                 if (res.code) {
                     $("#aa").after(``)
                     $.each(res.data, function(i, v) {
-                        $("tbody").append(`<tr id="${v.product_id} class="clearfix:after"">
+                        $("tbody").append(`<tr id="${v.product_id} ">
                             <td>${v.product_name}</td>
                             <td><img src=${v.product_img} class="img-thumbnail"></td>
                             <td>${v.product_price}</td>
