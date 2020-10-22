@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="src/lib/jquery.min.js"></script>
+    <script>
+        $.ajax({
+            url: "./ceshi.php",
+            dataType: "json",
+            success: function(a) {
+                console.log(a)
+            },
+            error: function(a) {
+                console.log("a")
+            },
+            type: "post",
+            data: {
+                name: "haha",
+                id: "xixi"
+            }
+
+        })
+        console.log(new Date().getTime())
+        var a = "a.aa."
+        console.log(a.split(".")[1])
+    </script>
+
+</body>
+
+</html>

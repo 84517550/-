@@ -113,6 +113,8 @@ var aaa = document.querySelector(".aaa")
 var ooo = document.querySelector(".ooo")
 var z1 = document.querySelector("#z1")
 var z2 = document.querySelector("#m1")
+var z2 = document.querySelector("#z2")
+var m2 = document.querySelector("#m2")
 var n1 = $("#xxx span").eq(0)
 var n2 = $("#xxx span").eq(1)
 
@@ -154,15 +156,13 @@ z2.oninput = function() {
     }
     //注册验证
 b1.onclick = function() {
-        if (aa(z1.value, aaa) && bb(z2.value, ooo)) {
-
+        if (z2.value && m2.value) {
             ps("../iconfont/zhuce.php", function(a) {
                 console.log(a)
                 if (a == "true") {
                     confirm("注册成功")
                 }
-            }, `name=${z1.value}&word=${z2.value}`)
-
+            }, `name=${z2.value}&word=${m2.value}`)
         }
     }
     //登录验证
@@ -185,7 +185,6 @@ b0.onclick = function() {
     }
     //注册登录点击换
 $("#box1 a").click(function() {
-        console.log($(this).index())
         $(this).addClass("toua").siblings("a").removeClass("toua")
             .siblings("div").children().eq($(this).index() - 1).css("display", "block")
             .siblings().css("display", "none")
@@ -329,12 +328,15 @@ $.ajax({
     // })
     //轮播图
 var mySwiper = new Swiper('.swiper-container', {
+    mousewheel: true,
+    keyboard: true,
     //切换方式
     effect: 'fade',
     fadeEffect: {
         crossFade: true,
     },
     loop: true, // 循环模式选项
+
     autoplay: true,
     autoplay: {
         delay: 2000,
